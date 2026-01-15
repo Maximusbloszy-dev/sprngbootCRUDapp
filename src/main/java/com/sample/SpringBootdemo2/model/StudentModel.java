@@ -1,17 +1,19 @@
 package com.sample.SpringBootdemo2.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@Table(name = "student_details")
 public class StudentModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "Id")
     private Integer studentId ;
+    @Column(name = "Name")
     private String studentName;
+    @Column(name = "Age")
     private Integer studentAge;
+    @Column(name = "Place")
     private String studentPlace;
 
     public StudentModel() {
